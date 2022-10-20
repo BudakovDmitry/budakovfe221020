@@ -1,0 +1,168 @@
+/*!**************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./src/components/UserCard/styles.css ***!
+  \**************************************************************************************/
+.user-card-container {
+  position: relative;
+}
+
+.user {
+  padding: 20px;
+  text-align: center;
+  height: 150px;
+  border-bottom: 1px solid rgba(128, 128, 128, 0.5);
+}
+
+.user-photo-container {
+  width: 80px;
+  height: 80px;
+  overflow: hidden;
+  border-radius: 40px;
+  margin: 10px auto;
+}
+
+.user-photo{
+  width: 100%;
+  margin: 0 auto;
+}
+
+.user-name {
+  margin: 0 0 10px 0;
+  font-weight: bold;
+}
+
+.user-position {
+  margin: 0;
+  color: rgba(128, 128, 128, 0.5)
+}
+
+.user-info {
+  padding: 30px;
+}
+
+.user-info-container {
+  display: flex;
+  justify-content: start;
+}
+
+.user-info-title {
+  font-weight: bold;
+  width: 70px;
+  margin-right: 10px;
+}
+
+.user-card-button {
+  display: block;
+  margin: 10px auto;
+  width: 90%;
+  height: 40px;
+  background: rgb(42, 54, 219);
+  color: #fff;
+  border: 1px solid rgba(128, 128, 128, 0.5);
+  border-radius: 10px;
+  box-shadow: 0px 4px 5px 0px rgba(34, 60, 80, 0.2);
+  font-size: 16px;
+}
+
+.user-card-button:hover {
+  background: rgb(0, 11, 159);
+}
+
+.user-card-close-button {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  background: none;
+  border: none;
+}
+/*!*******************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./src/components/UsersListItem/styles.css ***!
+  \*******************************************************************************************/
+.item-container {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  border-bottom: 1px solid rgba(128, 128, 128, 0.5);
+  min-height: 80px;
+}
+
+.item-photo-container {
+  width: 60px;
+  height: 60px;
+  overflow: hidden;
+  border-radius: 30px;
+  margin: 0 30px 0 10px;
+}
+
+.item-photo {
+  width: 100%;
+  margin: 0 auto;
+}
+
+.item-user-name-container {
+  margin-right: auto;
+}
+
+.item-user-name {
+  margin: 0 0 10px 0;
+}
+
+.item-user-nickname {
+  margin: 0;
+  color: rgba(128, 128, 128, 0.683);
+  font-size: 14px;
+}
+
+.item-button-view {
+  width: 70px;
+  height: 40px;
+  background: #fff;
+  color: black;
+  border: 1px solid rgba(128, 128, 128, 0.5);
+  border-radius: 10px;
+  box-shadow: 0px 4px 5px 0px rgba(34, 60, 80, 0.2);
+  font-size: 16px;
+}
+
+.item-button-view:hover {
+  background: rgb(187, 187, 187);
+  color: #fff;
+}
+/*!***************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./src/components/UsersList/styles.css ***!
+  \***************************************************************************************/
+.user-list-container {
+  position: relative;
+}
+
+.user-list-button-view {
+  display: block;
+  margin: 20px auto;
+  width: 90%;
+  height: 40px;
+  background: #fff;
+  color: black;
+  border: 1px solid rgba(128, 128, 128, 0.5);
+  border-radius: 10px;
+  box-shadow: 0px 4px 5px 0px rgba(34, 60, 80, 0.2);
+  font-size: 16px;
+}
+
+.user-list-button-view:hover {
+  background: rgb(187, 187, 187);
+  color: #fff;
+}
+/*!**********************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./src/app/styles.css ***!
+  \**********************************************************************/
+body {
+  font-family: 'Ubuntu', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.app-container {
+  margin: 50px auto;
+  width: 400px;
+  height: 100%;
+  border: 1px solid rgba(128, 128, 128, 0.5);
+}
