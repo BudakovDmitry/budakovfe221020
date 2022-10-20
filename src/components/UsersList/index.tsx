@@ -1,12 +1,16 @@
 import UsersListItem from 'src/components/UsersListItem'
 import './styles.css'
 
-const UsersList = () => {
+type UserListProps = {
+  openCard: () => void
+}
+
+const UsersList = ({ openCard }: UserListProps) => {
   return (
     <div className="user-list-container">
-      <UsersListItem />
-      <UsersListItem />
-      <UsersListItem />
+      <UsersListItem openCard={openCard} />
+      <UsersListItem openCard={openCard} />
+      <UsersListItem openCard={openCard} />
       <button className="user-list-button-view">View all</button>
     </div>
   )

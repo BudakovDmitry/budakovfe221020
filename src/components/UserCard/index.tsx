@@ -2,7 +2,11 @@ const Image = require('src/images/1.jpg')
 const CloseIcon = require('src/images/close-icon.svg')
 import './styles.css'
 
-const UserCard = () => {
+type UserCardProps = {
+  closeCard: () => void
+}
+
+const UserCard = ({ closeCard }: UserCardProps) => {
   return (
     <div className="user-card-container">
       <div className="user">
@@ -31,7 +35,7 @@ const UserCard = () => {
         </div>
       </div>
       <button className="user-card-button">Send message</button>
-      <button className="user-card-close-button">
+      <button onClick={closeCard} className="user-card-close-button">
         <img src={CloseIcon} alt="close" />
       </button>
     </div>
