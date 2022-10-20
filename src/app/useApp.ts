@@ -2,11 +2,13 @@ import { useState } from "react"
 import { useSelector } from 'react-redux'
 import { UserType } from "src/types"
 
-
+type RootState = {
+  users: UserType[]
+}
 
 export const useApp = () => {
   const [viewCard, setViewCard] = useState<boolean>(false)
-  const users = useSelector((state: any) => state.users)
+  const users = useSelector((state: RootState) => state.users)
   const [activeUser, setActiveUser] = useState<number>(0)
 
   const openCard = (index: number) => {
