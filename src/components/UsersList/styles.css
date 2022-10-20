@@ -1,0 +1,21 @@
+.user-list-container {
+  position: relative;
+}
+
+.user-list-button-view {
+  display: block;
+  margin: 20px auto;
+  width: 90%;
+  height: 40px;
+  background: #fff;
+  color: black;
+  border: 1px solid rgba(128, 128, 128, 0.5);
+  border-radius: 10px;
+  box-shadow: 0px 4px 5px 0px rgba(34, 60, 80, 0.2);
+  font-size: 16px;
+}
+
+.user-list-button-view:hover {
+  background: rgb(187, 187, 187);
+  color: #fff;
+}
