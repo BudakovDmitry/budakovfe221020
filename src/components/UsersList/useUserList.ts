@@ -1,7 +1,7 @@
 import { useState } from "react"
 
 export const useUserList = () => {
-  const [viewAllUsers, setViewAllUsers] = useState(false)
+  const [viewAllUsers, setViewAllUsers] = useState<boolean>(false)
 
   const handleAllView = () => {
     viewAllUsers ? setViewAllUsers(false) : setViewAllUsers(true)

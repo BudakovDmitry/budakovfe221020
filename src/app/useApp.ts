@@ -5,9 +5,9 @@ import { UserType } from "src/types"
 
 
 export const useApp = () => {
-  const [viewCard, setViewCard] = useState(false)
+  const [viewCard, setViewCard] = useState<boolean>(false)
   const users = useSelector((state: any) => state.users)
-  const [activeUser, setActiveUser] = useState(0)
+  const [activeUser, setActiveUser] = useState<number>(0)
 
   const openCard = (index: number) => {
     setActiveUser(index)
