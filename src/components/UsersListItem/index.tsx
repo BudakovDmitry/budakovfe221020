@@ -6,7 +6,10 @@ type UsersListItemProps = {
   user: UserType
 }
 
-const UsersListItem = ({ openCard, user }: UsersListItemProps) => {
+const UsersListItem = ({
+  openCard = () => {},
+  user = {} as UserType,
+}: UsersListItemProps) => {
   const photoUser = require(`src/images/${user.photo}`)
 
   return (

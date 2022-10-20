@@ -1,4 +1,5 @@
 const CloseIcon = require('src/images/close-icon.svg')
+import FallbackMessage from 'src/components/FallbackMessage'
 import { UserType } from 'src/types'
 import './styles.css'
 
@@ -7,8 +8,13 @@ type UserCardProps = {
   user: UserType
 }
 
-const UserCard = ({ closeCard, user }: UserCardProps) => {
+const UserCard = ({
+  closeCard = () => {},
+  user = {} as UserType,
+}: UserCardProps) => {
   const photoUser = require(`src/images/${user.photo}`)
+
+  if (!user) return <FallbackMessage />
 
   return (
     <div className="user-card-container">
