@@ -1,11 +1,12 @@
+import React from 'react'
 import { render, screen } from '@testing-library/react'
-import { UserType } from 'src/types'
-import UserList from 'src/components/UsersList'
+import { UserType } from '../src/types'
+import UserListItem from '../src/components/UsersListItem'
 
 describe('Test App component', () => {
   it('render App component', () => {
-    const users = [] as UserType[]
-    render(<UserList openCard={() => {}} users={users} />)
+    const user = {} as UserType
+    render(<UserListItem openCard={() => {}} user={user} />)
     screen.debug()
     expect(screen.getByText('View all')).toBeInTheDocument()
   })
