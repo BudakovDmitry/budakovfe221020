@@ -27,7 +27,7 @@ const UserCard = ({ closeCard, user }: UserCardProps) => {
         <div className="user-info-container">
           <p className="user-info-title">URL</p>
           <p>
-            <a href="#">{user.email}</a>
+            <a href="#">https://example.com</a>
           </p>
         </div>
         <div className="user-info-container">
