@@ -4,7 +4,6 @@ const config: Config = {
   verbose: true,
   testEnvironment: 'jest-environment-jsdom',
   preset: "ts-jest",
-  // "testEnvironment: "node",
   transform: {
     "node_modules/variables/.+\\.(j|t)sx?$": "ts-jest"
   },
