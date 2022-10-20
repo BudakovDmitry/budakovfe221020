@@ -1,6 +1,7 @@
 import { UserType } from 'src/types'
 import UsersListItem from 'src/components/UsersListItem'
 import './styles.css'
+import { useUserList } from 'src/components/UsersList/useUserList'
 
 type UserListProps = {
   openCard: () => void
@@ -8,12 +9,16 @@ type UserListProps = {
 }
 
 const UsersList = ({ openCard, users }: UserListProps) => {
+  const { viewAllUsers, handleAllView } = useUserList()
+
   return (
     <div className="user-list-container">
-      {users.map((user, index) => (
+      {(viewAllUsers ? users : users.slice(0, 3)).map((user, index) => (
         <UsersListItem key={index} openCard={openCard} user={user} />
       ))}
-      <button className="user-list-button-view">View all</button>
+      <button className="user-list-button-view" onClick={handleAllView}>
+        {viewAllUsers ? 'Hide' : 'View all'}
+      </button>
     </div>
   )
 }
