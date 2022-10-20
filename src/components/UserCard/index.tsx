@@ -1,36 +1,39 @@
-const Image = require('src/images/1.jpg')
 const CloseIcon = require('src/images/close-icon.svg')
+import { UserType } from 'src/types'
 import './styles.css'
 
 type UserCardProps = {
   closeCard: () => void
+  user: UserType
 }
 
-const UserCard = ({ closeCard }: UserCardProps) => {
+const UserCard = ({ closeCard, user }: UserCardProps) => {
+  const photoUser = require(`src/images/${user.photo}`)
+
   return (
     <div className="user-card-container">
       <div className="user">
         <div className="user-photo-container">
-          <img className="user-photo" src={Image} alt="photo" />
+          <img className="user-photo" src={photoUser} alt="photo" />
         </div>
-        <p className="user-name">Leonard Carser</p>
-        <p className="user-position">Front end</p>
+        <p className="user-name">{user.name}</p>
+        <p className="user-position">{user.position}</p>
       </div>
       <div className="user-info">
         <div className="user-info-container">
           <p className="user-info-title">Phone</p>
-          <p>+ 38095 116 97 07</p>
+          <p>{user.phone}</p>
         </div>
         <div className="user-info-container">
           <p className="user-info-title">URL</p>
           <p>
-            <a href="#">https://example.com</a>
+            <a href="#">{user.email}</a>
           </p>
         </div>
         <div className="user-info-container">
           <p className="user-info-title">Email</p>
           <p>
-            <a href="#">budakov.it@gmail.com</a>
+            <a href="#">{user.email}</a>
           </p>
         </div>
       </div>
